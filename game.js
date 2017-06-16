@@ -60,7 +60,7 @@ INPUT dan SAVE nilai variable 'nama'
 CREATE object baru gm dari object gameMaster
 ASSIGN nilai variable 'rede' dengan nilai return (INPUT dan SAVE 'ready') function welcome() dari object gm
 ASSIGN nilai variable 'conf' dengan nilai return function cekReady() dari object gm
-RUN function gameStart dari object gm
+RUN function gameStart dengan masukkan nilai parameter variable 'conf' dari object gm
 */
 
 //object
