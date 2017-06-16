@@ -63,9 +63,10 @@ ASSIGN nilai variable 'conf' dengan nilai return function cekReady() dari object
 RUN function gameStart dari object gm
 */
 
-//script
+//object
 function gameMaster(nama){
   this.nama = nama;
+  //function dalam object
   this.welcome = function (){
   	if (nama=='' || nama==null){
     	nama = 'Tamu';
@@ -107,7 +108,7 @@ function gameMaster(nama){
       else{
         skor -= 0.5;
       }
-      console.log(skor);
+      console.log(skor); //melihat log dari skor
     }
     this.gameOver(skor);
   }
@@ -133,10 +134,9 @@ function gameMaster(nama){
   }
 }
 
+//main
 var nama=prompt('Input nama anda: ');
 var gm = new gameMaster(nama);
 var rede = gm.welcome();
-//console.log(rede);
 var conf = gm.cekReady(rede);
-//console.log(conf);
 gm.gameStart(conf);
